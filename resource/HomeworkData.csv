@@ -1,0 +1,52 @@
+GraveID,Lat,Lon,Interred Name,Interred Alternate Name,Related Person,Relationship From Interred
+1,42.2666,-71.8,Evelyn Spence,Evelyn Dalgity,Ginny Spence,Parent
+1,42.2666,-71.8,Evelyn Spence,Evelyn Dalgity,Pam Corrow,Parent
+1,42.2666,-71.8,Evelyn Spence,Evelyn Dalgity,Bud Spence,Spouse
+1,42.2666,-71.8,Bud Spence,,Ginny Spence,Parent
+1,42.2666,-71.8,Bud Spence,,Pam Corrow,Parent
+2,42.8666,-73.816,Pam Corro,Pam Spence,Carl Corrow,Spouse
+2,42.8666,-73.816,Pam Corrow,Pam Spence,John Corrow,Parent
+2,42.8666,-73.816,Pam Corrow,Pam Spence,Carl Corrow II,Parent
+3,33.3033,-116.981,Dorothy Lodge,Dorothy Thornton,Rosemary Otto,Parent
+3,33.3033,-116.981,Dorothy Lodge,Dorothy Thornton,Hilmer Lodge,
+3,33.3033,-116.981,Dorothy Lodge,Dorothy Thornton,Eric Lodge,Parent
+3,33.3033,-116.981,Dorothy Lodge,Dorothy Thornton,Betsy Bremer,Parent
+3,33.3033,-116.981,Dorothy Lodge,Dorothy Thornton,Raymond Lodge,Parent
+4,-116.982,33.3034,Hilmer Lodge,,Rosemary Otto,Parent
+4,-116.982,33.3034,Hilmer Lodge,,Raymond Lodge,Parent
+4,-116.982,33.3034,Hilmer Lodge,,Erik Lodge,Parent
+4,-116.982,33.3034,Hilmer Lodge,,Betsy Bremer,Parent
+5,-117.2603,32.9952,Eric Lodge,,Ginny Spence,Spouse
+5,-117.2603,32.9952,Eric Lodge,,Suellen Lodge,Spouse
+5,-117.2603,32.9952,Eric Lodge,,Julann Lodge,Parent
+5,-117.2603,32.9952,Eric Lodge,,David Lodge,Parent
+5,-117.2603,32.9952,Eric Lodge,,Adam Lodge,Parent
+5,-117.2603,32.9952,Suellen Lodge,,Suellent Laurs, Suellen Black,,
+6,37.6688,-122.0808,Adam Loge,,Kai Lodge,Parent
+6,37.6688,-122.0808,Adam Lodge,,Almetria Vaba,Spouse
+7,20.914,-100.7436,Cesar Arteaga,,,
+8,37.6688,-122.0808,Ginny Spence,,Adam Lodge,Parent
+8,37.6688,-122.0808,Ginny Spence,,David Lodge,Parent
+8,37.6688,-122.0808,Ginny Spence,,Julann Lodge,Parent
+9,21.3,-157.81666,Betsy Bremer,Betsy Lodge,,
+10,32.99,-117.2,Raymond Lodge,,,
+11,47.659,-117.425,Rosemary Otto,Rosemary Lodge,,
+12,33.122,-117.297,Julann Lodge,,JohnSmith,Spouse
+12,33.122,-117.297,Julann Lodge,,Odin Arteaga,Parent
+12,33.122,-117.297,Julann Lodge,,Sebastian Arteaga,Parent
+12,33.122,-117.297,Sebastian Arteaga,,,
+12,33.122,-117.297,Odin Arteaga,,,
+12,33.122,-117.297,John Smith,,,
+13,37.6688,-122.0808,David Lodge,,,
+14,41.8,-71.422,John Corrow,,,
+15,37.6688,-122.0808,Carl Corrow,,Carl Corrow II,Parent
+15,37.6688,-122.0808,Carl Corrow,,John Corrow,Parent
+16,41.8,-71.422,Carl Corrow II,,Addison Corrow,Parent
+16,41.8,-71.422,Carl Corrow II,,Bridgett Corrow,Parent
+16,41.8,-71.422,Carl Corrow II,,Jodi Corrow,Spouse
+16,41.8,-71.422,Jodi Corrow,Jodi Pukle,Addison Corrow,Parent
+16,41.8,-71.422,Jodi Corrow,Jodi Pukle,Bridgett Corrow,Parent
+16,41.8,-71.422,Bridgett Corrow,,,
+16,41.8,-71.422,Addison Corrow,,,
+17,27.988,86.925,Kai Lodge,,,
+20,37.6688,-122.0808,Almetria Vaba,,Kai Lodge,Parent
