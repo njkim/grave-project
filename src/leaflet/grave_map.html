@@ -15,8 +15,7 @@
 	<div id="map"></div>
 
 	<script>
-		var interred_json = {
-			"interred": [
+		var interred_json = [
 			{"grave_id":1,"person":"Evelyn Spence"},
 			{"grave_id":1,"person":"Bud Spence"},
 			{"grave_id":2,"person":"Pam Corrow"},
@@ -43,10 +42,9 @@
 			{"grave_id":16,"person":"Addison Corrow"},
 			{"grave_id":17,"person":"Kai Lodge"},
 			{"grave_id":20,"person":"Almetria Vaba"}
-			]};
+			];
 
-		var relationship_json = {
-			"relationship": [
+/*		var relationship_json = [
 			{"person1":"Adam Lodge","person2":"Almetria Vaba","relationship":"Spouse"},
 			{"person1":"Adam Lodge","person2":"Kai Lodge","relationship":"Parent"},
 			{"person1":"Almetria Vaba","person2":"Kai Lodge","relationship":"Parent"},
@@ -123,8 +121,8 @@
 			{"person1":"Rosemary Otto","person2":"Hilmer Lodge","relationship":"Child"},
 			{"person1":"Rosemary Otto","person2":"Dorothy Lodge","relationship":"Child"},
 			{"person1":"Sebastian Arteaga","person2":"Julann Lodge","relationship":"Child"}
-			]};
-
+			];
+*/
 		var grave_geojson = {
 			"type": "FeatureCollection",
 			"name": "grave",
@@ -178,14 +176,26 @@
 		    iconUrl: "scripts/images/rip.svg",
 		    iconSize:     [38, 95]
 		});
+		
+		var getInterred = function(input_id) {
+			console.log('input_id is' + input_id)
+			var return_string = '';
+			for (var i = 0; i < interred_json.length; i++) {
+				if (interred_json[i].grave_id == input_id) {
+					return_string = return_string + interred_json[i].person + '</br>';
+				};
+			};
+			return return_string;
+		};
 
 		var pointToLayer = function(feature,latlng){
 			var marker = L.marker(latlng, {icon: tombstone});
-			marker.bindPopup('Grave ID ' + '<strong>' + feature.properties.grave_id + '</strong>');
+			marker.bindPopup('<strong>' + 'Grave ' + feature.properties.grave_id + '</strong></br>'
+					+ getInterred(feature.properties.grave_id));
 			return marker;
 		};
 
-		var grave = L.geoJson(grave_geojson, {
+		L.geoJson(grave_geojson, {
 								pointToLayer: pointToLayer
 								}).addTo(map);
 
