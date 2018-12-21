@@ -1,3 +1,5 @@
+--To test the database import by comparing the flattened table with raw data table give
+
 CREATE TABLE grave_flat AS
 	(SELECT a.grave_id "GraveID",
 		a.lat "Lat",

@@ -1,0 +1,25 @@
+{
+"type": "FeatureCollection",
+"name": "grave",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "grave_id": 1, "lat": 42.2666, "lon": -71.8 }, "geometry": { "type": "Point", "coordinates": [ -71.8, 42.2666 ] } },
+{ "type": "Feature", "properties": { "grave_id": 2, "lat": 42.8666, "lon": -73.816 }, "geometry": { "type": "Point", "coordinates": [ -73.816, 42.8666 ] } },
+{ "type": "Feature", "properties": { "grave_id": 3, "lat": 33.3033, "lon": -116.981 }, "geometry": { "type": "Point", "coordinates": [ -116.981, 33.3033 ] } },
+{ "type": "Feature", "properties": { "grave_id": 4, "lat": 33.3034, "lon": -116.982 }, "geometry": { "type": "Point", "coordinates": [ -116.982, 33.3034 ] } },
+{ "type": "Feature", "properties": { "grave_id": 5, "lat": 32.9952, "lon": -117.26 }, "geometry": { "type": "Point", "coordinates": [ -117.2603, 32.9952 ] } },
+{ "type": "Feature", "properties": { "grave_id": 6, "lat": 37.6688, "lon": -122.081 }, "geometry": { "type": "Point", "coordinates": [ -122.0808, 37.6688 ] } },
+{ "type": "Feature", "properties": { "grave_id": 7, "lat": 20.914, "lon": -100.744 }, "geometry": { "type": "Point", "coordinates": [ -100.7436, 20.914 ] } },
+{ "type": "Feature", "properties": { "grave_id": 8, "lat": 37.6688, "lon": -122.081 }, "geometry": { "type": "Point", "coordinates": [ -122.0808, 37.6688 ] } },
+{ "type": "Feature", "properties": { "grave_id": 9, "lat": 21.3, "lon": -157.817 }, "geometry": { "type": "Point", "coordinates": [ -157.81666, 21.3 ] } },
+{ "type": "Feature", "properties": { "grave_id": 10, "lat": 32.99, "lon": -117.2 }, "geometry": { "type": "Point", "coordinates": [ -117.2, 32.99 ] } },
+{ "type": "Feature", "properties": { "grave_id": 11, "lat": 47.659, "lon": -117.425 }, "geometry": { "type": "Point", "coordinates": [ -117.425, 47.659 ] } },
+{ "type": "Feature", "properties": { "grave_id": 12, "lat": 33.122, "lon": -117.297 }, "geometry": { "type": "Point", "coordinates": [ -117.297, 33.122 ] } },
+{ "type": "Feature", "properties": { "grave_id": 13, "lat": 37.6688, "lon": -122.081 }, "geometry": { "type": "Point", "coordinates": [ -122.0808, 37.6688 ] } },
+{ "type": "Feature", "properties": { "grave_id": 14, "lat": 41.8, "lon": -71.422 }, "geometry": { "type": "Point", "coordinates": [ -71.422, 41.8 ] } },
+{ "type": "Feature", "properties": { "grave_id": 15, "lat": 37.6688, "lon": -122.081 }, "geometry": { "type": "Point", "coordinates": [ -122.0808, 37.6688 ] } },
+{ "type": "Feature", "properties": { "grave_id": 16, "lat": 41.8, "lon": -71.422 }, "geometry": { "type": "Point", "coordinates": [ -71.422, 41.8 ] } },
+{ "type": "Feature", "properties": { "grave_id": 17, "lat": 27.988, "lon": 86.925 }, "geometry": { "type": "Point", "coordinates": [ 86.925, 27.988 ] } },
+{ "type": "Feature", "properties": { "grave_id": 20, "lat": 37.6688, "lon": -122.081 }, "geometry": { "type": "Point", "coordinates": [ -122.0808, 37.6688 ] } }
+]
+}
