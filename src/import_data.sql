@@ -109,3 +109,5 @@ INSERT INTO RELATIONSHIP (person1_id, person2_id, relationship) VALUES (19,25,'P
 INSERT INTO RELATIONSHIP (person1_id, person2_id, relationship) VALUES (22,7,'Spouse');
 INSERT INTO RELATIONSHIP (person1_id, person2_id, relationship) VALUES (22,17,'Parent');
 INSERT INTO RELATIONSHIP (person1_id, person2_id, relationship) VALUES (22,8,'Parent');
+
+UPDATE relationship SET relationship = 'Spouse' WHERE person1_id=11 AND person2_id=15
