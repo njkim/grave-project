@@ -5,6 +5,10 @@ Resource: resources including raw data
 
 SRC: source code incdluing sql and python script
 
+  sql: sql script for PostgreSQL
+  
+  leaflet: Javascript for web mapping
+  
 Doc: documents created for the porject
 
 ### progress
@@ -26,5 +30,7 @@ GeoServer has been installed and running locally
 
 created several views to feed GeoServer / ArcGIS Pro
 
+also created several JSON for webmapping
 
+created a map with points using leaflet
 
