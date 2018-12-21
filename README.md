@@ -22,3 +22,9 @@ The original csv table was recreated from joining tables in Postgres
 
 GeoServer has been installed and running locally
 
+12/20
+
+created several views to feed GeoServer / ArcGIS Pro
+
+
+
