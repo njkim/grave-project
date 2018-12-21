@@ -14,4 +14,6 @@ Data Model has been designed and Entity Relationship Diagram has been added
 
 Postgres tables created and data imported
 
-The original csv table is recreated from joining tables in Postgres
+The original csv table was recreated from joining tables in Postgres
+
+GeoServer has been installed and running locally
