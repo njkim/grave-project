@@ -174,8 +174,13 @@
 
 		Stamen_Watercolor.addTo(map);
 		
+		var tombstone = L.icon({
+		    iconUrl: "scripts/images/rip.svg",
+		    iconSize:     [38, 95]
+		});
+
 		var pointToLayer = function(feature,latlng){
-			var marker = L.marker(latlng);
+			var marker = L.marker(latlng, {icon: tombstone});
 			marker.bindPopup('Grave ID ' + '<strong>' + feature.properties.grave_id + '</strong>');
 			return marker;
 		};
