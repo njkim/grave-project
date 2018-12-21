@@ -1,9 +1,9 @@
 CREATE VIEW interred_view AS
-	(SELECT i.grave_id, concat(p.first_name, ' ', p.last_name)
+	(SELECT i.grave_id, concat(p.first_name, ' ', p.last_name) as person
 	FROM interred i, person p, grave g
 	WHERE g.grave_id = i.grave_id
 	AND p.person_id = i.person_id);
-	
+
 CREATE VIEW relationship_view AS
 	(SELECT person1, concat(q.first_name, ' ', q.last_name) as person2, a.relationship
 	FROM	(SELECT concat(p.first_name, ' ', p.last_name) person1, r.person2_id, r.relationship
