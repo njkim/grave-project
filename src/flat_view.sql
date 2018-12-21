@@ -1,4 +1,4 @@
-CREATE VIEW grave_flat AS
+CREATE VIEW grave_flat_view AS
 	(SELECT a.grave_id "GraveID",
 		a.lat "Lat",
 		a.lon "Lon",
