@@ -4,6 +4,7 @@
 	<title>Grave-project</title>
 	<link rel="stylesheet" href="scripts/leaflet.css" />
 	<script src="scripts/leaflet.js"></script>
+	<script src="scripts/leaflet.ajax.min.js"></script>
 	<script src="scripts/jquery-3.1.1.min.js"></script>
 	
 	<style>
@@ -15,8 +16,10 @@
 	<div id="map"></div>
 
 	<script>
+	
+		var grave_geojson = L.geoJson.ajax("http://localhost:8080/geoserver/graves/ows?request=GetFeature&service=WFS&version=1.0.0&typeName=graves:grave&outputFormat=text/javascript&format_options=callback:processJSON");
 
-		var grave_geojson = $.getJSON("http://localhost:8080/geoserver/wfs?request=GetFeature&service=WFS&version=1.0.0&typeName=graves:grave&outputFormat=application/json");
+	//		var grave_geojson = L.geoJson.ajax("http://localhost:8080/geoserver/wfs?request=GetFeature&service=WFS&version=1.0.0&typeName=graves:grave&outputFormat=text/javascript&format_options=callback:processJSON");
 
 /*		var interred_json = $.getJSON("http://localhost:8080/geoserver/wfs?request=GetFeature&service=WFS&version=1.0.0&typeName=graves:interred_view&outputFormat=application/json");
 
