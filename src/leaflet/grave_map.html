@@ -7,13 +7,17 @@
 	<script src="scripts/jquery-3.1.1.min.js"></script>
 	
 	<style>
-		#map{ height: 100% }
+		#map{ height: 90% }
 	</style>
 </head>
 <body>
 
 	<div id="map"></div>
 
+		<label for="txtPasses">Enter Person's Name<span class="inputs"></span></label>
+		<input type="text" id="txtPasses" name="passes">
+		<input type="button" value="Find!" id="btnSubmit">
+		
 	<script>
 		var interred_json = [
 			{"grave_id":1,"person":"Evelyn Spence"},
@@ -148,7 +152,7 @@
 			{ "type": "Feature", "properties": { "grave_id": 20, "lat": 37.6688, "lon": -122.081 }, "geometry": { "type": "Point", "coordinates": [ -122.0808, 37.6688 ] } }
 			]};
 
-		var map = L.map('map').setView([39, -100], 5);
+		var map = L.map('map').setView([20, -35], 3);
 
 		var Stamen_Watercolor = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
 			attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Icon made by Freepik from www.flaticon.com',
@@ -214,6 +218,13 @@
 			'OpenMap Surfer Grayscale': OpenMapSurfer_Grayscale,
 			'Esri World Imagery': Esri_WorldImagery
 		},{},{position: 'topright', collapsed: false}).addTo(map);
+
+		document.getElementById("btnSubmit").onclick = function() {
+			var freePassenger = document.getElementById("txtPasses").value;
+			var availableSeat = maxCapacity - ticketedPassenger - freePassenger;
+			$("#airbus").hide();
+			$("#results").text("The number of available seats is " + availableSeat);
+		};
 		
 	</script>
 </body>
