@@ -1,0 +1,95 @@
+<html>
+	<meta charset="UTF-8"> 
+<head>
+	<title>Grave-project</title>
+	<link rel="stylesheet" href="scripts/leaflet.css" />
+	<script src="scripts/leaflet.js"></script>
+	<script src="scripts/jquery-3.1.1.min.js"></script>
+	
+	<style>
+		#map{ height: 100% }
+	</style>
+</head>
+<body>
+
+	<div id="map"></div>
+
+	<script>
+
+		var grave_geojson = $.getJSON("http://localhost:8080/geoserver/wfs?request=GetFeature&service=WFS&version=1.0.0&typeName=graves:grave&outputFormat=application/json");
+
+/*		var interred_json = $.getJSON("http://localhost:8080/geoserver/wfs?request=GetFeature&service=WFS&version=1.0.0&typeName=graves:interred_view&outputFormat=application/json");
+
+		var relationship_json = $.getJSON("http://localhost:8080/geoserver/wfs?request=GetFeature&service=WFS&version=1.0.0&typeName=graves:relationship_2way_view&outputFormat=application/json");
+*/
+
+		var map = L.map('map').setView([39, -100], 5);
+
+		var Stamen_Watercolor = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
+			attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Icon made by Freepik from www.flaticon.com',
+			subdomains: 'abcd',
+			maxZoom: 14,
+			minZoom: 2,
+			ext: 'png'
+		});
+
+		var OpenMapSurfer_Grayscale = L.tileLayer('http://korona.geog.uni-heidelberg.de/tiles/roadsg/x={x}&y={y}&z={z}', {
+			maxZoom: 20,
+			minZoom: 2,
+			attribution: 'Imagery from <a href="http://giscience.uni-hd.de/">GIScience Research Group @ University of Heidelberg</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Icon made by Freepik from www.flaticon.com'
+		});
+
+		var Esri_WorldImagery = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+			attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community, Icon made by Freepik from www.flaticon.com',
+			maxZoom: 20,
+			minZoom: 2,
+			});
+
+		Stamen_Watercolor.addTo(map);
+		
+		var tombstone = L.icon({
+		    iconUrl: "scripts/images/rip.svg",
+		    iconSize:     [38, 95]
+		});
+/*
+		var getInterred = function(input_id) {
+			var return_string = '';
+			for (var i = 0; i < interred_json.length; i++) {
+				if (interred_json[i].grave_id == input_id) {
+					return_string = return_string + "<a href=\"#\" onclick=\"alert('" + getRelated(interred_json[i].person) + "');\">" + interred_json[i].person + "</a></br>";
+				};
+			};
+			console.log(return_string)
+			return return_string;
+		};
+		
+		var getRelated = function(person) {
+			var return_string = '';
+			for (var i = 0; i < relationship_json.length; i++) {
+				if (relationship_json[i].person1 == person) {
+					return_string = return_string + relationship_json[i].relationship + ' of ' + relationship_json[i].person2 +  '  ';
+				};
+			};
+			return return_string;
+		};
+*/
+		var pointToLayer = function(feature,latlng){
+			var marker = L.marker(latlng, {icon: tombstone});
+			marker.bindPopup('<strong>' + 'Grave ' + feature.properties.grave_id + '</strong></br>'
+					+ getInterred(feature.properties.grave_id));
+			return marker;
+		};
+
+		L.geoJson(grave_geojson, {
+								pointToLayer: pointToLayer
+								}).addTo(map);
+
+		L.control.layers({
+			'Stamen Watercolor': Stamen_Watercolor,
+			'OpenMap Surfer Grayscale': OpenMapSurfer_Grayscale,
+			'Esri World Imagery': Esri_WorldImagery
+		},{},{position: 'topright', collapsed: false}).addTo(map);
+		
+	</script>
+</body>
+</html>
