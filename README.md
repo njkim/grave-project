@@ -46,6 +46,8 @@ Testing with GeoServer with Leaflet
 
 12/23
 
-created a webmap connected to GeoServer WMS service along with a webmap using internal GeoJSON files
+created a webmap connected to GeoServer WMS service
+
+and a webmap using internal GeoJSON files
 
 https://njkim.github.io/grave_map.html
