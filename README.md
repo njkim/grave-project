@@ -34,3 +34,17 @@ also created several JSON for webmapping
 
 created a map with points using leaflet
 
+12/21
+
+Postgres database was connected to GeoServer
+
+Leaflet map was customized with popup labels and links
+
+12/22
+
+Testing with GeoServer with Leaflet
+
+12/23
+
+created a webmap connected to GeoServer WMS service along with a webmap using internal GeoJSON files
+
