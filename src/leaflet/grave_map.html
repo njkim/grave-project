@@ -1,23 +1,19 @@
 <html>
-	<meta charset="UTF-8"> 
 <head>
+	<meta charset="UTF-8">
 	<title>Grave-project</title>
 	<link rel="stylesheet" href="scripts/leaflet.css" />
 	<script src="scripts/leaflet.js"></script>
 	<script src="scripts/jquery-3.1.1.min.js"></script>
 	
 	<style>
-		#map{ height: 90% }
+		#map{ height: 100% }
 	</style>
 </head>
 <body>
 
 	<div id="map"></div>
 
-		<label for="txtPasses">Enter Person's Name<span class="inputs"></span></label>
-		<input type="text" id="txtPasses" name="passes">
-		<input type="button" value="Find!" id="btnSubmit">
-		
 	<script>
 		var interred_json = [
 			{"grave_id":1,"person":"Evelyn Spence"},
@@ -188,7 +184,6 @@
 					return_string = return_string + "<a href=\"#\" onclick=\"alert('" + getRelated(interred_json[i].person) + "');\">" + interred_json[i].person + "</a></br>";
 				};
 			};
-			console.log(return_string)
 			return return_string;
 		};
 		
@@ -219,13 +214,6 @@
 			'Esri World Imagery': Esri_WorldImagery
 		},{},{position: 'topright', collapsed: false}).addTo(map);
 
-		document.getElementById("btnSubmit").onclick = function() {
-			var freePassenger = document.getElementById("txtPasses").value;
-			var availableSeat = maxCapacity - ticketedPassenger - freePassenger;
-			$("#airbus").hide();
-			$("#results").text("The number of available seats is " + availableSeat);
-		};
-		
 	</script>
 </body>
 </html>
