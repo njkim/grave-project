@@ -169,6 +169,15 @@
 			source: gravePoint
 		});
 
+		var iconStyle = new ol.style.Style({
+			image: new ol.style.Icon(({
+				src: 'scripts/images/rip.png',
+				scale: 0.15
+			}))
+		});
+
+		graveLayer.setStyle(iconStyle);
+
 		var map = new ol.Map({
 			target: 'map',
 			layers: [waterColorLayer, graveLayer],
